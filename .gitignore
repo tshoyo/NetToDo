@@ -1,0 +1,59 @@
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code files
+.vscode/
+
+# Rider files
+.idea/
+*.sln.iml
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb][Ii][Nn]/
+[Oo][Bb][Jj]/
+[Ll][Oo][Gg]/
+[Tt][Ee][Ss][Tt][Rr][Ee][Ss][Uu][Ll][Tt][Ss]/
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# Coverage
+TestResults/
+*.cobertura.xml
+coverage.json
+*_report.txt
+*_coverage.txt
+test_output.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# App Specific
+wwwroot/uploads/*
+!wwwroot/uploads/oasco-logo.png
+!wwwroot/uploads/.gitkeep

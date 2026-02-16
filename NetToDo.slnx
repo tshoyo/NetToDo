@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="NetToDo.csproj" />
+  <Project Path="NetToDo.Tests/NetToDo.Tests.csproj" />
+</Solution>

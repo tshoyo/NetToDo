@@ -1,0 +1,12 @@
+**/.git/
+**/.vs/
+**/.vscode/
+**/bin/
+**/obj/
+**/wwwroot/uploads/*
+!**/wwwroot/uploads/.gitkeep
+nettodo.db
+appsettings.Development.json
+NetToDo.Tests/
+*.sln
+*.user

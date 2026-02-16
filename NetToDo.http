@@ -1,0 +1,63 @@
+@NetToDo_HostAddress = http://localhost:5226
+
+### Auth - Register
+POST {{NetToDo_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "testuser",
+  "email": "test@example.com",
+  "password": "Password123!"
+}
+
+### Auth - Login
+# @name login
+POST {{NetToDo_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "Password123!"
+}
+
+###
+@authToken = {{login.response.body.token}}
+
+### Profile - Get Current User
+GET {{NetToDo_HostAddress}}/api/profile
+Authorization: Bearer {{authToken}}
+
+### TodoLists - Get All
+GET {{NetToDo_HostAddress}}/api/todolists
+Authorization: Bearer {{authToken}}
+
+### TodoLists - Create
+# @name createList
+POST {{NetToDo_HostAddress}}/api/todolists
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+  "name": "New List"
+}
+
+###
+@listId = {{createList.response.body.id}}
+
+### TodoItems - Get All for List
+GET {{NetToDo_HostAddress}}/api/todoitems?todoListId={{listId}}
+Authorization: Bearer {{authToken}}
+
+### TodoItems - Create Item
+POST {{NetToDo_HostAddress}}/api/todoitems
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+{
+  "todoListId": {{listId}},
+  "title": "First Item",
+  "description": "Item description"
+}
+
+### Info - OpenAPI
+GET {{NetToDo_HostAddress}}/api/info/openapi
