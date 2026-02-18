@@ -99,6 +99,7 @@ Then run:
 
 ```bash
 docker-compose up --build
+```
 
 ### API Documentation
 
@@ -106,4 +107,4 @@ Once running, you can explore the API schema via the OpenAPI endpoint:
 
 - `http://localhost:5226/openapi/v1.json` (Local)
 - `http://localhost:8080/openapi/v1.json` (Docker)
-```
+
